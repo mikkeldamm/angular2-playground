@@ -4,7 +4,20 @@ import {StickDirective} from './stick.directive';
 
 @Component({
   selector: 'my-app',
-  template: `<h1 stick [stickMin]="200" [stickClass]="'damm'">My First Angular 2 App</h1><div class="what">Some text</div>`,
+  template: `
+    <header stick>
+        <h3>This header will stick after default 100px on the Y-axis with class 'stick'</h3>
+    </header>
+    <main>
+        <section>
+            This will become a very large area :)
+        </section>
+        <aside stick [stickMin]="200" [stickClass]="'left-stick'">
+            This could be a box containing filters, menus, itinerary etc.<br>
+            It will get the class 'left-stick' after 200px on the Y-axis
+        </aside>
+    </main>
+    `,
   directives: [StickDirective]
 })
 export class AppComponent { }
