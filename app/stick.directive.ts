@@ -6,15 +6,15 @@ import {WindowRef} from './window';
 })
 export class StickDirective {
 
-    private _minY: number;
-    private _className: string;
+    private _minY: number = 100;
+    private _className: string = 'stick';
 
     @Input('stickMin') set stickMin(minY: number) {
-        this._minY = minY || 100;
+        this._minY = minY || this._minY;
     }
 
     @Input('stickClass') set stickClass(className: string) {
-        this._className = className || 'stick';
+        this._className = className || this._className;
     }
 
     constructor(private _element: ElementRef, private _window: WindowRef) {
