@@ -16,7 +16,43 @@ body, input[text], button {
   color: #888; 
   font-family: Cambria, Georgia; 
 }
-main {
-  
-  height: 600px;
+
+header {
+    width: 100%;
+    background-color: #DEF4FF;
+    padding: 1.5em;
+    border-bottom: 1px solid #A2C6D8;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+header h3 {
+    margin: 0;
+    padding: 0;
+}
+
+header.stick {
+    
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+}
+
+main section {
+    height: 600px;
+    float: left;
+}
+
+main aside {
+    float: right;
+}
+
+main aside.left-stick {
+    position: fixed;
+    right: 1.5em;
+    top: 3em;
 }
